@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+margin:0;
+font-family: "Lato", sans-serif;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+.container {
+    width: 90%;
+    margin:0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.708);
+    z-index: 1000;
+     border-bottom: 1px solid rgb(190, 187, 187);
+    }
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 8px 0;
+}
+.logo img {
+    width: 130px;
+}
+.navbar-n {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-n a,.navbar-n-n a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* عشان مننساش من اول هنا عملنا جزء ان الخط يتحرك لما نعمل هوفر علي اي حاجه منهم */
+.navbar-n a::after,.navbar-n-n a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #E01212;
+    transition: 0.3s;
+}
+
+.navbar-n a:hover,.navbar-n-n a:hover
+ {
+    color: #E01212;
+}
+
+.navbar-n a:hover::after,
+.navbar-n a.active::after,
+.navbar-n-n a:hover::after
+ {
+    width: 100%;
+}
+.icon-n {
+    position: relative;
+    width: 230px;
+}
+.icon-n input {
+    width: 100%;
+    padding: 15px 40px 15px 20px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    outline: none;
+}
+
+.icon-n input::placeholder {
+    color: #aaa;
+}
+
+.icon-n i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+}
+.icon-res {
+    display: none;
+    position: relative;
+}
+.icon-res i {
+    color: white;
+    font-size: 2em;
+    
+}
+.icon-res ul {
+position: absolute;
+display: none;
+background-color: rgba(20, 20, 20, 0.9);
+color: white;
+display: none;
+list-style: none;
+text-align: center;
+left: -90px;
+top: 40px;
+
+}
+.icon-res ul li {
+    padding: 15px;
+}
+
+.icon-res ul li a{
+    text-decoration: none;
+ }
+   .icon-res:hover.icon-res ul {
+    display: block;
+}
+@media (max-width: 480px) {
+    .navbar-n {
+    display: none;
+   }
+    .icon-res {
+        display: block;
+    }
+    .icon-res:hover.icon-res ul {
+    display: block;
+}
+    .icon-n {
+        display: none;
+    }}
+
+
+@media (max-width: 950px) {
+.navbar-n{
+    font-size: 1em;
+    gap: 23px;
+}
+.icon-n {
+    position: relative;
+    width: 190px;
+}
+}
+@media (max-width: 810px) {
+.navbar-n{
+    font-size: 0.9em;
+    gap: 20px;
+}
+.icon-n {
+    position: relative;
+    width: 150px;
+}
+}
+.ll{
+text-align:center;
+margin-top:70px;
+}
+
+.ll h1{
+font-size:42px;
+font-weight:600;
+padding-top: 90px;
+}
+
+.l1{
+width:70px;
+height:3px;
+background:#ff2c2c;
+margin:15px auto 25px;
+border-radius:5px;
+}
+
+
+.ta{
+display:flex;
+justify-content:center;
+gap:45px;
+}
+
+.ta span{
+cursor:pointer;
+opacity:.6;
+transition:.3s;
+}
+
+.ta span:hover{
+opacity:1;
+}
+
+.ta .active{
+color:#ff2c2c;
+opacity:1;
+}
+
+
+.menu1{
+width:65%;
+margin:70px auto;
+}
+
+.he{
+text-align:center;
+margin-bottom:40px;
+position:relative;
+}
+
+.he::before,
+.he::after{
+content:"";
+position:absolute;
+top:50%;
+width:80px;
+height:1px;
+background:#444;
+}
+
+.he::before{
+left:30%;
+}
+
+.he::after{
+right:30%;
+}
+
+.rr{
+display:grid;
+gap:30px;
+}
+
+.rrr{
+display:grid;
+grid-template-columns:80px 1fr auto;
+align-items:center;
+gap:20px;
+padding-bottom:20px;
+border-bottom:1px dashed #333;
+transition:.3s;
+}
+
+.rrr:hover{
+transform:scale(1.02);
+}
+
+.rrr img{
+width:80px;
+height:80px;
+border-radius:12px;
+object-fit:cover;
+}
+
+.o1 h3{
+font-size:15px;
+margin-bottom:6px;
+}
+
+.o1 p{
+font-size:13px;
+color:#aaa;
+}
+
+.he2{
+font-weight:600;
+color: #f0c20b;
+}
+
+
+@media(max-width:768px){
+
+.navbar{
+grid-template-columns:1fr;
+gap:15px;
+text-align:center;
+}
+
+.hhh{
+justify-content:center;
+}
+
+.menu1{
+width:90%;
+}
+
+.he::before,
+.he::after{
+display:none;
+}
+
+.rrr{
+grid-template-columns:60px 1fr;
+}
+
+.he2{
+grid-column:2;
+}
+}
+/* Title */
+.w {
+    text-align: center;
+    padding: 60px 10%;
+}
+.w h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.w h2::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: 10px auto;
+}
+/* Tabs */
+.tb {
+    margin-bottom: 40px;
+}
+
+.tb span {
+    margin: 0 15px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.tb .ti {
+    color: red;
+}
+
+/* Cards */
+.no {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.ca {
+    background: #2a2a2a;
+    padding: 20px;
+    margin: 30px 0;
+    transition: 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 0 6px 0px white;
+}
+
+.ca:hover {
+    transform: translateY(-8px);
+}
+
+.ca img {
+    width: 200px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.ca h3 {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.ca p {
+    color: #f8c819;
+}
+/* Footer */
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+       background-color: rgb(11, 11, 11);
+    width: 100%;
+}
+.foot-one {
+    display: flex;
+    padding: 0 30px;
+    justify-content:space-between;
+   align-items: center;
+}
+.foot-one-one {
+    text-align: center;
+    padding: 30px;
+}
+.foot-one-one img {
+    width:170px;
+
+}
+.foot-one-two a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fff;
+    transition: all 0.4 ease;
+}
+.foot-one-two a:hover{
+   color: #b91c1c;
+   text-shadow:  2px 2px rgba(220, 38, 38, 0.3);
+   box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+}
+a i{
+    color: #fff;
+}
+.foot-two {
+   padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foot-two-one a {
+    margin-left: 5px;
+    font-size: 20px;
+}
+.phone a {
+    color: #b31010;           
+    text-decoration: none;   
+    font-weight: 500;
+    transition:all 0.3s ease;
+}
+
+.phone a:hover {
+    color: #d53434;            
+    text-shadow:  2px 2px rgba(236, 40, 40, 0.347);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
