@@ -1030,3 +1030,137 @@ a i{
     color: #d53434;            
     text-shadow:  2px 2px rgba(236, 40, 40, 0.347);
 }
+/* ================= RESPONSIVE FIXES ================= */
+
+/* موبايل و تابلت */
+@media (max-width: 992px) {
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .hero-text {
+    padding-top: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  .hero-text p {
+    margin: 20px auto;
+  }
+
+  .main-dish {
+    position: relative;
+    max-width: 90%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  /* HEADER */
+  .icon-n {
+    display: none;
+  }
+
+  .navbar-n {
+    display: none;
+  }
+
+  .icon-res {
+    display: block;
+  }
+
+  .icon-res ul {
+    width: 180px;
+    left: -120px;
+  }
+
+  /* ABOUT */
+  .about-right {
+    width: 100%;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  /* SPECIAL SECTION */
+  .special-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .chef-image img {
+    margin: auto;
+  }
+
+  /* UPCOMING */
+  .upcoming-content {
+    flex-direction: column;
+  }
+
+  .upcoming-info::before {
+    display: none;
+  }
+
+  .upcoming-content h3 {
+    font-size: 40px;
+  }
+
+  /* FOOTER */
+  .foot-one {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .foot-one-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .foot-two {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+
+/* موبايل صغير */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .menu-cards {
+    padding: 20px 15px;
+  }
+
+  .upcoming-content h3 {
+    font-size: 30px;
+  }
+
+}
