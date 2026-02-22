@@ -236,7 +236,7 @@ top: 40px;
   }
 }
 .main-dish {
-  animation: floatImage 4s ease-in-out infinite;
+  animation: floatImage 6s ease-in-out infinite;
 }
 
 @keyframes floatImage {
